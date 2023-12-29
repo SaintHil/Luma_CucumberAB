@@ -13,11 +13,21 @@ public class CategoryStepDefinitions {
     public void the_user_hovers_over_on_the_and_and_clicks(String Category, String SubCatButton, String NestedSubCatButton) {
         BrowserUtils.waitFor(1);
         BrowserUtils.hover(Driver.get().findElement(By.xpath("//span[text()='"+Category+"']")));
+        BrowserUtils.waitFor(2);
+        BrowserUtils.hover(Driver.get().findElement(By.xpath("(//span[text()='"+SubCatButton+"'])["+getGender(Category)+"]")));
+        BrowserUtils.waitFor(2);
+        Driver.get().findElement(By.xpath("(//span[contains(.,'"+NestedSubCatButton+"')])["+getGender(Category)+"]")).click();
+        BrowserUtils.waitFor(2);
+    }
+    int getGender(String section) {
+        //1 women, 2 men
+        return section.equals("Men") ? 2 : 1;
 
     }
-
     @Then("Verify that the user is directed to NestedSubSection page")
     public void verify_that_the_user_is_directed_to_nested_sub_section_page() {
+
+
 
     }
 
