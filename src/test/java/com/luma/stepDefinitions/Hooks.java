@@ -1,13 +1,14 @@
 package com.luma.stepDefinitions;
 
 import com.luma.utilities.Driver;
-import com.luma.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import java.util.concurrent.TimeUnit;
+
+
+
 
 
 
@@ -17,7 +18,7 @@ public class Hooks {
     @Before // JAVA
     public void setUp() {
         //System.out.println("\tThis is coming from Before method");
-        Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+       // Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.get().manage().window().maximize();
     }
 
