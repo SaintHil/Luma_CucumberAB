@@ -10,7 +10,7 @@ Feature: Category Function
     Examples:
       | Category | SubCatButton | NestedSubCatButton |
       | Women    | Tops         | Jackets            |
-    #  | Women    | Tops         | Hoodies            |
+    #  | Women    | Tops         | Hoodies            | Verify that .. contains Hoodies..
     #  | Women    | Tops         | Tees               |
      # | Women    | Tops         | Tanks              |
       #| Women    | Bottoms      | Pants              |
