@@ -1,13 +1,18 @@
 package com.luma.stepDefinitions;
 
+import com.luma.utilities.BrowserUtils;
+import com.luma.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 public class CategoryStepDefinitions {
 
 
     @When("The user hovers over on the {string} and {string} and clicks {string}")
     public void the_user_hovers_over_on_the_and_and_clicks(String Category, String SubCatButton, String NestedSubCatButton) {
+        BrowserUtils.waitFor(1);
+        BrowserUtils.hover(Driver.get().findElement(By.xpath("//span[text()='"+Category+"']")));
 
     }
 
