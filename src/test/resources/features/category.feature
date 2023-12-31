@@ -6,16 +6,16 @@ Feature: Category Function
   @AB
   Scenario Outline:The user should be able to navigate to NestedSubSection Pages.
     When The user hovers over on the "<Category>" and "<SubCatButton>" and clicks "<NestedSubCatButton>"
-    Then Verify that the user is directed to NestedSubSection page
+    Then Verify that the user is directed to NestedSubSection "<Page>"
     Examples:
-      | Category | SubCatButton | NestedSubCatButton |
-      | Women    | Tops         | Jackets            |
-    #  | Women    | Tops         | Hoodies            | Verify that .. contains Hoodies..
+      | Category | SubCatButton | NestedSubCatButton | Page                     |
+      | Women    | Tops         | Jackets            | women/tops-women/jackets |
+    #  | Women    | Tops         | Hoodies            |
     #  | Women    | Tops         | Tees               |
      # | Women    | Tops         | Tanks              |
       #| Women    | Bottoms      | Pants              |
           # | Women    | Bottoms      | Shorts        |
-      #| Men      | Tops         | Jackets            |
+      #| Men      | Tops         | Jackets            |men/tops-men/jackets|
      # | Men      | Tops         | Hoodies            |
      # | Men      | Tops         | Tees               |
       #| Men      | Tops         | Tanks              |
