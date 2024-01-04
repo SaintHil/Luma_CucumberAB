@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/luma/stepDefinitions",
-        dryRun = true,
-        tags = "@az"
+        dryRun = false,
+        tags = "@LM-15"
 )
 public class CukesRunner{
 }
